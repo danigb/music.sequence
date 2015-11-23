@@ -1,0 +1,38 @@
+{
+  "name": "music.sequence",
+  "private": "true",
+  "version": "0.0.0",
+  "description": "Get the midi number of a note",
+  "main": "index.js",
+  "scripts": {
+    "test": "vows --spec test/*.js",
+    "docs": "documentation -f md > API.md",
+    "dist": "browserify index.js | uglifyjs > dist/sequence.min.js&& ls -all dist/",
+    "cover": "npm run coverage && open ./coverage/lcov-report/index.html",
+    "climate": "npm run coverage && npm run codeclimate",
+    "codeclimate": "CODECLIMATE_REPO_TOKEN= codeclimate-test-reporter < coverage/lcov.info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danigb/music.sequence.git"
+  },
+  "keywords": [
+    "music",
+    "note",
+    "midi",
+    "music.kit"
+  ],
+  "author": "danigb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danigb/music.sequence/issues"
+  },
+  "homepage": "https://github.com/danigb/music.sequence#readme",
+  "devDependencies": {
+    "music.kit": "0.0.x",
+    "vows": "^0.8.1"
+  },
+  "dependencies": {
+    "note-duration": "^1.3.0"
+  }
+}
